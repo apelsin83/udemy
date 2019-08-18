@@ -25,4 +25,20 @@ class FunctionsSuite extends FunSuite {
     val afn = Functions.factorial(5)
     assert(afn == 120)
   }
+
+  test("fibonacci") {
+    assert(Functions.fibonacci(1) == 1)
+    assert(Functions.fibonacci(2) == 1)
+    assert(Functions.fibonacci(10) == 55)
+    assert(Functions.fibonacci(12) == 144)
+  }
+
+  test("prime 10") {
+    assert(Functions.prime(10) == false)
+    assert(Functions.prime(11) == true)
+    assert(Functions.prime(37) == true)
+    assert(Functions.prime(2003) == true)
+
+  }
+
 }

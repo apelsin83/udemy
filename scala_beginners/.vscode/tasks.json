@@ -7,20 +7,6 @@
             "label": "gradlew",
             "type": "shell",
             "command": "./gradlew run",
-            "group": "build",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            }
-        },
-        {
-            "label": "gradlew_test",
-            "type": "shell",
-            "command": "./gradlew test -i",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -28,11 +14,29 @@
             "presentation": {
                 "echo": true,
                 "reveal": "always",
-                "focus": false,
+                "focus": true,
                 "panel": "shared",
                 "showReuseMessage": true,
                 "clear": false
-            }
-        }
+            },
+            "problemMatcher": []
+        },
+        // {
+        //     "label": "gradlew_test",
+        //     "type": "shell",
+        //     "command": "./gradlew test -i",
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     },
+        //     "presentation": {
+        //         "echo": true,
+        //         "reveal": "always",
+        //         "focus": false,
+        //         "panel": "shared",
+        //         "showReuseMessage": true,
+        //         "clear": false
+        //     }
+        // }
     ]
 }

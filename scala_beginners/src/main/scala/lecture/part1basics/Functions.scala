@@ -13,12 +13,40 @@ object Functions extends App {
   def greeting(name: String, age: Int): String =
     s"Hi, name $name my age $age"
 
-  @tailrec
+  
   def factorial(n: Int): Int = {
-    def go(n: Int, prod: Int): Int = {
-      if (n < 1) prod
-      else n * go(n - 1, prod)
+
+    @tailrec
+    def go(n: Int, acc: Int): Int = {
+      if (n < 1) acc
+      else go(n - 1, n * acc)
     }
+
     go(n, 1)
+  }
+
+
+  def fibonacci(n: Int): Int = {
+
+    @tailrec
+    def go(n: Int, prev: Int, cur: Int): Int = {
+      if (n < 3) cur
+      else go(n-1, cur, prev + cur)
+    }
+    go(n, 1, 1)
+  }
+
+
+  def prime(n: Int): Boolean = {
+
+    @tailrec
+    def go(acc: Int): Boolean = {
+      if (acc < 2) true
+      else {
+        if (n % acc == 0) false
+        else go(acc - 1) 
+      }
+    }
+    go(n / 2)
   }
 }
