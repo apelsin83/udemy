@@ -111,4 +111,4 @@ afterEvaluate {
 description = "rock-the-jvm-scala-for-beginners"
 version = "1.0"
 
-mainClassName = 'lecture.part1basics.Recursion'
+mainClassName = 'lecture.part2oop.MethodNotations'

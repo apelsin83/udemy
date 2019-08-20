@@ -13,7 +13,6 @@ object Functions extends App {
   def greeting(name: String, age: Int): String =
     s"Hi, name $name my age $age"
 
-  
   def factorial(n: Int): Int = {
 
     @tailrec
@@ -25,17 +24,15 @@ object Functions extends App {
     go(n, 1)
   }
 
-
   def fibonacci(n: Int): Int = {
 
     @tailrec
     def go(n: Int, prev: Int, cur: Int): Int = {
       if (n < 3) cur
-      else go(n-1, cur, prev + cur)
+      else go(n - 1, cur, prev + cur)
     }
     go(n, 1, 1)
   }
-
 
   def prime(n: Int): Boolean = {
 
@@ -44,7 +41,7 @@ object Functions extends App {
       if (acc < 2) true
       else {
         if (n % acc == 0) false
-        else go(acc - 1) 
+        else go(acc - 1)
       }
     }
     go(n / 2)

@@ -40,4 +40,4 @@ subprojects/*/out
 # Metals
 .metals
 bin/
-
+scala_beginners/.bloop/*
