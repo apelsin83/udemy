@@ -41,3 +41,7 @@ subprojects/*/out
 .metals
 bin/
 scala_beginners/.bloop/*
+
+# Other
+.vscode/
+.DS_Store

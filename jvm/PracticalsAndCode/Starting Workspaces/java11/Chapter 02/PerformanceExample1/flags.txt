@@ -1,0 +1,26 @@
+javac ./main/Main.java -d ../bin && java -cp ../bin  main.Main 10
+
+-XX:+PrintCompilation - print compilation
+-XX:+UnlockDiagnosticVMOptions
+-XX:+LogCompilation - compilation to file
+-XX:+PrintCodeCache - code cache info
+-XX:+TieredCompilation - interpretered modeonly
+
+
+
+-XX:InitialCodeCacheSize=
+-XX:ReservedCodeCacheSize=
+-XX:CodeCacheExpansionSize=
+
+-XX:CICompilerCount=8 // change threads
+-XX:CompileThreshold  // change minimum to be compiled method
+
+-client less code analysis compilation
+-server  32 bit serever compilation (or 64)
+-d64 64 bit serever compilation
+
+java -XX:+PrintFlagsFinal look intx CICompilerCount  = 4  number of cores (and default number of threads)
+
+jsconsole - for consumption
+jps - running processes
+jinfo -flag CICompilerCount <JAVA_PROCESS_ID>
