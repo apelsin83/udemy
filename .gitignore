@@ -45,3 +45,4 @@ scala_beginners/.bloop/*
 # Other
 .vscode/
 .DS_Store
+.bloop/

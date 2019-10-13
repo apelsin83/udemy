@@ -5,11 +5,11 @@ object Generics extends App {
   class MyList[+A] {
     // use the type A
 
-    def add[B >: A](element: B): MyList[B] = ??? 
+    def add[B >: A](element: B): MyList[B] = ???
     /*
       A = Cat
       B = Dog = Animal
-    */
+   */
 
   }
 
@@ -42,19 +42,16 @@ object Generics extends App {
   val animalList: CovariantList[Animal] = new CovariantList[Cat]
   // animalList.add(new Dog)??? HARD QUESTION >>>>> we return list of animals
 
-
   // 2. List[Cat] NOT extends List[Animal] = INVARIANCE
   class InvariantList[A]
   val animalInvariantList: InvariantList[Animal] = new InvariantList[Animal]
 
-
   // 3. CONTRAVARIANCE
   class ContravariantList[-A]
   val contraVariantList: ContravariantList[Cat] = new ContravariantList[Animal]
-  
+
   class Trainer[-A]
   val trainer: Trainer[Cat] = new Trainer[Animal]
-
 
   //  bounded types
 

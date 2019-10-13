@@ -111,6 +111,6 @@ afterEvaluate {
 description = "rock-the-jvm-scala-for-beginners"
 version = "1.0"
 
-// mainClassName = 'lecture.part2oop.CaseClasses'
+mainClassName = 'lecture.part2oop.Exceptions'
 
-mainClassName = 'exercises.ListTest'
+// mainClassName = 'exercises.ListTest'

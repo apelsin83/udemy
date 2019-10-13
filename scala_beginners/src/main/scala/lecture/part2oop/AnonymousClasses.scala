@@ -6,9 +6,6 @@ object AnonymousClasses extends App {
     def eat: Unit
   }
 
-
-  
-
   //Anonymous class
 
   def funnyAnimal: Animal = new Animal {
@@ -22,7 +19,6 @@ object AnonymousClasses extends App {
 
   println(funnyAnimal.getClass)
 
-
   class Person(name: String) {
     def sayHi: Unit = println(s"Hi, my name is $name")
   }
@@ -32,8 +28,6 @@ object AnonymousClasses extends App {
     override def sayHi: Unit = println(s"Hi, my name is Jim")
   }
 
-
-  
   trait MyPredicate[T] {
     def isPassed(value: T): Boolean
   }

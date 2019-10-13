@@ -4,7 +4,7 @@ object CaseClasses extends App {
 
   case class Person(name: String, age: Int)
 
-  // 1. class parameters are promoted to fields 
+  // 1. class parameters are promoted to fields
   // 2. toString changes
   // 3. println instance calls toString
   // 4. equals and hashCode is working out of the box
@@ -18,12 +18,11 @@ object CaseClasses extends App {
 
   val thePerson = Person
   val mary = Person("Mary", 23)
-  
+
   println(jim.name)
   println(jim.toString)
   println(jim)
   println(jim == jim2)
-
 
   case object UnitedKingdom {
     def name: String = "The UK"

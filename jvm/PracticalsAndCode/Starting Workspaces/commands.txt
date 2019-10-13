@@ -1,0 +1,8 @@
+
+javac -d build --module-source-path "../*/src" $(find src -name "*.java") -verbose
+
+javac -d build --module-source-path "../*/src" --module EscapingReferences
+
+
+java --module-path build --module EscapingReferences/com.virtalpairprogrammers.escapingreferences.customers.Main
+

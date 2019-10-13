@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "EscapingReferencesClient/main.Main",
+            "projectName": "EscapingReferences"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "EscapingReferencesClient/main.Main",
+            "modulePaths": [
+                "/Users/vasililitvin/drive/WORK/env/study/udemy/jvm/PracticalsAndCode/Starting Workspaces/java11/Chapter 07/EscapingReferences/build"
+            ],
+            "projectName": "EscapingReferencesClient"
+        }
+    ]
+}
