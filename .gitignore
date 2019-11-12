@@ -46,3 +46,4 @@ scala_beginners/.bloop/*
 .vscode/
 .DS_Store
 .bloop/
+scala_beginners/.DS_Store
