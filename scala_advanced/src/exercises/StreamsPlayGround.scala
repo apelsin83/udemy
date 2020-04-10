@@ -97,9 +97,27 @@ object StreamsPlayGround extends App {
   val sizefrom0: MyStream[Long] = 0 #:: naturals
 
   println(sizefrom0.head)
-  sizefrom0.take(10000).foreach(println)
+//  sizefrom0.take(10000).foreach(println)
 
   println(sizefrom0.map(_ * 2).take(100).toList())
   println(sizefrom0.flatMap(x => new Cons(x + 1, EmptyStream)).take(10).toList())
+  println(sizefrom0.filter(_ < 10).take(10).take(20).toList())
+
+  /*
+  Tasks
+  1. Fibonacci
+  2. prime numbers by Eratosphene sieve
+   */
+
+  def fibonacci(first: Int, second: Int): MyStream[Int] =
+    new Cons(first, fibonacci(second, first+second))
+  println(fibonacci(1,1).take(10).toList())
+
+  val naturals2 = MyStream.from(2L)(_ + 1)
+  def eratothenes(numbers: MyStream[Long]): MyStream[Long] =
+    if (numbers.isEmpty) numbers
+    else new Cons(numbers.head, eratothenes(numbers.tail.filter(_ % numbers.head != 0)))
+
+  println(eratothenes(naturals2).take(10).toList())
 
 }
